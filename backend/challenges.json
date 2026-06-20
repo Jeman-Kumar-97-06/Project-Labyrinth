@@ -1,0 +1,19 @@
+[
+  {
+    "id": "seq_01",
+    "title": "Continuous Sequence Recovery",
+    "description": "Navigate the legacy filesystem to find the router core. Fix the breaking pipeline logic to return the missing sequence number.",
+    "cleanCode": "function solveChallenge(arr) {\n  const n = arr.length + 1;\n  const expectedSum = (n * (n + 1)) / 2;\n  const actualSum = arr.reduce((sum, num) => sum + num, 0);\n  return expectedSum - actualSum;\n}",
+    "tests": [
+      { "input": [1, 2, 4, 5], "expected": 3 },
+      { "input": [1, 2, 3, 4, 6], "expected": 5 },
+      { "input": [2, 3, 4], "expected": 1 }
+    ]
+  },
+  {
+    "id": "hash_02",
+    "title": "Data Matrix Deduplication",
+    "description": "The data matrix is returning duplicate entries. Locate the sanitization module and implement an O(n) deduplication algorithm.",
+    "cleanCode": "\nfunction solveChallenge(dataArray) {\n  // TODO: Return an array with all duplicate values removed, maintaining original order.\n  // Must run in O(n) time complexity.\n  \n  return []; \n}\n    "
+  }
+]
