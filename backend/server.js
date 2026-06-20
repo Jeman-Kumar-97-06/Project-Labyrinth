@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: 'https://bright-khapse-2658ea.netlify.app/', // Put your exact Netlify URL here
+  origin: 'https://bright-khapse-2658ea.netlify.app', // Put your exact Netlify URL here
   optionsSuccessStatus: 200 
 };
 app.use(cors(corsOptions));
