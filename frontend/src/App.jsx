@@ -20,7 +20,7 @@ const ChallengeWorkspace = () => {
 
   // 1. Initial Challenge Fetch
   useEffect(() => {
-    fetch(`http://localhost:3000/api/challenge?id=${id}`)
+    fetch(`https://project-labyrinth.onrender.com/api/challenge?id=${id}`)
       .then(res => {
         if (!res.ok) throw new Error("Challenge not found");
         return res.json();
@@ -68,7 +68,7 @@ const ChallengeWorkspace = () => {
     const finalCode = activeFile ? activeFile.content : "";
 
     try {
-      const response = await fetch('http://localhost:3000/api/submit', {
+      const response = await fetch('https://project-labyrinth.onrender.com/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

@@ -11,7 +11,7 @@ export const InterviewerDashboard = () => {
   const [formData, setFormData] = useState({ title: '', description: '', cleanCode: '' });
 
   const fetchChallenges = () => {
-    fetch('http://localhost:3000/api/admin/challenges')
+    fetch('https://project-labyrinth.onrender.com/api/admin/challenges')
       .then(res => res.json())
       .then(data => {
         setChallenges(data);
@@ -43,8 +43,8 @@ export const InterviewerDashboard = () => {
 
   const handleSave = async (id) => {
     const url = id === 'new' 
-      ? 'http://localhost:3000/api/admin/challenges' 
-      : `http://localhost:3000/api/admin/challenges/${id}`;
+      ? 'https://project-labyrinth.onrender.com/api/admin/challenges' 
+      : `https://project-labyrinth.onrender.com/api/admin/challenges/${id}`;
     
     const method = id === 'new' ? 'POST' : 'PUT';
 
@@ -61,7 +61,7 @@ export const InterviewerDashboard = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this challenge?")) return;
     
-    await fetch(`http://localhost:3000/api/admin/challenges/${id}`, { method: 'DELETE' });
+    await fetch(`https://project-labyrinth.onrender.com/api/admin/challenges/${id}`, { method: 'DELETE' });
     fetchChallenges();
   };
 
